@@ -38,9 +38,9 @@ const SearchSection = ({ query, setQuery, handleSearch, filter, setFilter }) => 
                         </select>
 
                         <div className="filter-btns">
-                            <button className="filter-btn click" onClick={() => setFilter("popular")}>Popular</button>
-                            <button className="filter-btn click" onClick={() => setFilter("new")}>New</button>
-                            <button className="filter-btn click" onClick={() => setFilter("old")}>Old</button>
+                            <button className={`filter-btn click ${filter === "popular" ? "filter-btn-active" : ""}`} onClick={() => setFilter("popular")}>Popular</button>
+                            <button className={`filter-btn click ${filter === "new" ? "filter-btn-active" : ""}`} onClick={() => setFilter("new")}>New</button>
+                            <button className={`filter-btn click ${filter === "old" ? "filter-btn-active" : ""}`} onClick={() => setFilter("old")}>Old</button>
 
                             <a href="#results">
                                 <button className="filter-btn reset-filters--btn click" onClick={() => setFilter("")}>
